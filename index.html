@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bonsai: Pricing</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+
+<body class="container">
+ <header>
+   <nav class="navbar">
+     <div class="navbar__logo">
+       <a href="/" id="home">
+         <img src="assets/svg/logo.svg" alt="logo">
+       </a>
+     </div>
+     <div class="navbar__container">
+       <ul role="list" class="nav">
+        <li class="nav__list-items"><a href="">Product</a></li>
+        <li class="nav__list-items dropdown"><a href="#">Templates <img src="/assets/icons/caret-down-svgrepo-com.svg" alt="dropdown icon"> <span class="caret"></span></a>
+          <button class="dropdown__button"
+          </button>
+          <ul role="list" class="dropdown__content">
+            <li><a href="#">Iphone</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Linux</a></li>
+            <li><a href="#">Windows</a></li>
+          </ul>
+        </li>
+        <li class="nav__list-items button__clear"><a href="#">Pricing</a></li>
+        <li class="nav__list-items button__fill"><a href="">Review</a></li>
+        
+         
+       </ul>
+     </div>
+     <div navbar__end>
+       <button class="button__clear">Log in</button>
+       <button class="button__fill">Start Free</button>
+     </div>
+   </nav>
+ </header>
+ 
+ <main>
+   <section class="top-heading">
+     <div class="top-heading__price">
+       <h2>Plans & Pricing</h2>
+     </div>
+     <div class="top-heading__subscription-duration">
+        <span>Monthly</span>
+       <div class="toggle">
+          <div class="toggle-switch">
+            <input class="toggle-background" type="text">
+            <label class="toggle-slider" for="">
+            </label>
+          </div>
+       </div>
+       <span>Yearly</span>
+   </section>
+   <section class="card-container">
+     <div class="card">
+       <h2>Workflow</h2>
+       <p class="card__price">192 <span class="card__duration">/Month</span></p>
+       <div class="card__features">
+         <ul role="list" class="card__features__list">
+           <li class="card__features__list-items">Unlimited Clients & Projects</li>
+           <li class="card__features__list-items">Proposal</li>
+           <li class="card__features__list-items">Contracts</li>
+           <li class="card__features__list-items">Invoicing &Payments</li>
+           <li class="card__features__list-items">Client CRM</li>
+           <li class="card__features__list-items">Project Management</li>
+           <li class="card__features__list-items">Task &Time Tracking</li>
+           <li class="card__features__list-items">iOS, Android, Chrome & Mac Apps</li>
+         </ul>
+       </div>
+       <button class="card__submit">Start Free</button>
+     </div>
+     <div class="card">
+       <h2>Workflow</h2>
+       <p class="card__price">192 <span class="card__duration">/Month</span></p>
+       <div class="card__features">
+         <ul role="list" class="card__features__list">
+           <li class="card__features__list-items">Everything in Workflow, plus...</li>
+           <li class="card__features__list-items">White-labelled client experience</li>
+           <li class="card__features__list-items">Client forms and questionnaires [TAG]</li>
+           <li class="card__features__list-items">Workflow Automation</li>
+           <li class="card__features__list-items">Sub-contracting (client-mode)</li>
+           <li class="card__features__list-items">Calendly integration</li>
+           <li class="card__features__list-items">Client Portal</li>
+         </ul>
+       </div>
+       <button class="button__fill card__submit">Start Free</button>
+     </div>
+   </section>
+   <section class="tier__column">
+     <h2 class="tier__heading">Super charge your work with add-ons</h2>
+     <section class="tier3">  
+       <div class="tier">
+         <h3>Collaborators</h3>
+         <p>Invite other users to specific projects for limited access and functionality</p>
+       </div>
+       <div class="tier__price">
+         <span>Free</span>
+        </div>
+     </section>
+     <section class="tier2">
+       <div class="tier">
+         <h3>Partners</h3>
+         <p>Invite other users for full account access and company management</p>
+       </div>
+       <div class="tier__price"><span>$9</span></div>
+     </section>
+     <section class="tier1">
+       <div class="tier">
+         <div class="tier__detail">
+         <h3>Bonsai Tax</h3>
+         <p>Track expenses, odentify write-offs, and estimate quartely taxes easily</p>
+         <div class="tier__full-detail text-green"><a href="#">LEARN MORE</a></div>
+         </div>
+        <div class="tier__price"><span>$10</span></div>
+       </div>
+     </section>
+   </section>
+   <section class="qoute bg__light-blue">
+     <div class="slogan">
+       <blockqoute>
+         It is <span class="text-green">your</span> business.
+         <br>
+         We're here to help it grow.
+       </blockqoute>
+     </div>
+     <div class="button__fill">
+       <button class="button__fill">Start Here</button>
+      </div>
+   </section>
+   <section class="faq text-green">
+     <h2>Frequently Asked Questions</h2>
+     <div class="faq__box">
+       <p class="faq__question">How does the 14 day free trial work?</p>
+       <p class="faq__question">Can I change plans anytime?</p>
+       <p class="faq__question">How do I pause my Bonsai subscription</p>
+       <p class="faq__question">What is your refund policy?</p>
+     </div>
+   </section>
+   
+ </main>
+ <footer class="footer">
+   <div class="footer__product">
+     <h3>PRODUCT</h3>
+     <ul role="list">
+       <li>Proposals</li>
+       <li>Contracts</li>
+       <li>Invoicing</li>
+       <li>Client CRM</li>
+       <li>Time Tracking</li>
+       <li>Task Tracking</li>
+       <li>Forms</li>
+       <li>Accounting</li>
+       <li>Bonsai Tax</li>
+       <li>Bonsai Cash</li>
+     </ul>
+      <h4 class="text-green">Pricing</h4>
+     <ul role="list">
+       <li>Bonsai Reviews</li>
+     </ul>
+   </div>
+   <div class="footer__resources">
+     <h3>FREE RESOURCES</h3>
+     <ul role="list">
+       <li>Freelance Resources</li>
+       <li>Freelance Blog by Bonsai</li>
+       <li>How to Write a Contract</li>
+       <li>Online Signature Maker</li>
+       <br>
+       <li>Self-Employed Taxes Hub</li>
+       <li>Self-Employed Taxes Calculator</li>
+     </ul>
+     <h4>Templates</h4>
+     <ul role="list">
+       <li>Invoice Templates</li>
+       <li>Proposal Templates</li>
+       <li>Contract Templates</li>
+       <li>Agreement Templates</li>
+       <li>Scope of Work Templates</li>
+       <li>Qoute Templates</li>
+       <li>Credit Note Templates</li>
+       <li>Estimate Templates</li>
+     </ul>
+   </div>
+   <div class="footer__bonsai">
+    <h3>BONSAI</h3>
+      <ul role="list">
+       <li>About</li>
+       <li>Careers</li>
+       <li>Support</li>
+       <li>LinkedIn</li>
+       <li>Twitter</li>
+       <li>Privacy policy</li>
+       <li>Legal</li>
+      </ul>
+       <br>
+      <ul role="list">
+       <li>Affliates</li>
+       <li>Write for Us</li>
+      </ul>
+      <ul role="list">
+       <li>Comparisons</li>
+      </ul>
+   </div>
+ </footer>
+  <script src="main.js"></script>
+</body>
+</html>
