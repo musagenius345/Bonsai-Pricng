@@ -1,0 +1,4 @@
+@use '../util' as *;
+.footer{
+  @include flex(space-evenly, stretch, row);
+}

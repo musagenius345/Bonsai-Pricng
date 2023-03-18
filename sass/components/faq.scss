@@ -1,0 +1,5 @@
+@use '../util' as *;
+
+.faq{
+  @include flex(stretch, center, column)
+}

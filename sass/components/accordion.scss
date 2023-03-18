@@ -1,0 +1,24 @@
+@use '../util' as *;
+
+.card{
+  background-color: hsla(235, 6%, 74%, .4);
+  /* @include flex(flex-start, center, column); */
+  background-color: $card;
+  border: 1px solid hsla(84, 3%, 62%, 1);
+  gap: 1em;
+  &-container{
+    @include equal-col();
+    gap: 2em;
+    margin-inline: 10rem;
+  
+  }
+  &__submit{
+    flex: 1;
+    margin-bottom: 2em;
+    
+  }
+  ul li{
+    line-height: 1.7;
+  }
+
+}

@@ -1,0 +1,12 @@
+@use '../util' as *;
+
+
+.bg__light-blue{
+ background-color: $fill; 
+}
+
+.qoute{
+  @include flex(space-around, flex-start, row);
+  margin-block: 1.25rem;
+  padding-block: 3em;
+}

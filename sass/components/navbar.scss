@@ -1,0 +1,34 @@
+@use '../util' as *;
+
+header{
+  max-width: 100%;
+  
+}
+.navbar{
+  @include flex(space-between, center, row);
+  overflow: hidden;
+  
+  
+  &__container{
+    position: relative;
+    a:hover{
+      
+    }
+  }
+}
+.nav{
+  @include flex(center, center, row);
+  gap: 2em;
+  
+  &__end{
+    @include flex(space-around, center, row);
+  }
+  &__list-item{
+    font-style: 1.8rem;
+  }
+}
+
+
+
+
+

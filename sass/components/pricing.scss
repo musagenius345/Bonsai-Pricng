@@ -1,0 +1,5 @@
+@use '../util' as *;
+
+.top-heading{
+  @include flex(space-between, center, row)
+}

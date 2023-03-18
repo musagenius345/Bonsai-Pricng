@@ -1,0 +1,31 @@
+@use '../util' as *;
+
+
+.tier{
+  @include flex(space-evenly, flex-start, column);
+  
+  &__column{
+    @include flex(flex-start, stretch, column);
+    gap: 1.25em;
+    margin-inline: 1rem;
+  }
+  
+  &__price{
+    @include flex(center, center, row);
+    font-size: 2.5rem;
+    font-weight: 550;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2em;
+    
+  }
+  &__detail{
+    @include flex($direction: column);
+    
+  }
+  :is(&1, &2, &3){
+    @include flex(space-between, flex-start, row);
+    background-color: #BEBFD04D;
+    padding: .5em 1.2em;
+  }
+}
