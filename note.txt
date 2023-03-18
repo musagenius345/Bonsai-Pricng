@@ -1,0 +1,13 @@
+#Colors
+
+bg #fff
+tag #f8db62
+curve-svg fill and business qoute box #e8f0f8
+emphasis and buttons #00b289
+gap and contaainer shadow (contrast) #4c4d5f
+
+
+fonts
+Gellix, San-Serif
+fw: 500, 600 & 700.
+
