@@ -1,0 +1,184 @@
+@mixin transform($property){
+  -webkit-transform: $property; /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: $property; /* IE 9 */
+          transform: $property; /* IE 10, Fx 16+, Op 12.1+ */
+}
+@mixin flex($justify: null, $align: null, $direction: row){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin equal-col(){
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+@mixin center(){
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/// 绘制三角形
+/// @param {String} $position 
+/// @param {Number} $caret-width 
+/// @param {Number} $border-width
+/// @param {String} $direction
+/// @param {String} $border-color 
+/// @param {String} $background-color 
+/// @example
+/// //SCSS
+/// .caret{
+///   @include caret(absolute,50px,1px,bottom,red,#ccc);
+/// }
+/// //CSS
+/// .caret {
+///     position: absolute;
+/// }
+/// .caret:before, .caret:after {
+///    content: "";
+///   `position: absolute;
+/// }
+/// .caret:before {
+///    top: 0;
+///    left: 0;
+///    border-top: 50px solid red;
+///    border-left: 50px solid transparent;
+///    border-right: 50px solid transparent;
+/// }
+/// .caret:after {
+///    left: 1px;
+///    top: 0;
+///    border-top: 49px solid #ccc;
+///    border-left: 49px solid transparent;
+///    border-right: 49px solid transparent;
+/// }
+/// @link http://lugolabs.com/caret
+
+@mixin caret($position,$caret-width,$border-width,$direction,$border-color,$background-color){
+  position: $position;
+  
+  &:before,
+  &:after {
+    content:"";
+    position: absolute;
+  }
+  @if $direction == top {
+    &:before {
+      top:0;
+      left: 0;
+      border-bottom: $caret-width solid $border-color;
+      border-left: $caret-width solid transparent;
+      border-right: $caret-width solid transparent;
+    }
+    &:after {
+      left: $border-width;
+      top: $border-width;
+      border-bottom: ($caret-width - $border-width) solid $background-color;
+      border-left: ($caret-width - $border-width) solid transparent;
+      border-right: ($caret-width - $border-width) solid transparent;
+    }
+  }
+  @else if $direction == right {
+    &:before {
+      top:0;
+      left: 0;
+      border-left: $caret-width solid $border-color;
+      border-top: $caret-width solid transparent;
+      border-bottom: $caret-width solid transparent;
+    }
+    &:after {
+      left: 0;
+      top: $border-width;
+      border-left: ($caret-width - $border-width) solid $background-color;
+      border-top: ($caret-width - $border-width) solid transparent;
+      border-bottom: ($caret-width - $border-width) solid transparent;
+    }
+  }
+  @else if $direction == bottom {
+    &:before {
+      top:0;
+      left: 0;
+      border-top: $caret-width solid $border-color;
+      border-left: $caret-width solid transparent;
+      border-right: $caret-width solid transparent;
+    }
+    &:after {
+      left: $border-width;
+      top: 0;
+      border-top: ($caret-width - $border-width) solid $background-color;
+      border-left: ($caret-width - $border-width) solid transparent;
+      border-right: ($caret-width - $border-width) solid transparent;
+    }
+  } 
+  @else if $direction == left {
+    &:before {
+      top:0;
+      left: 0;
+      border-right: $caret-width solid $border-color;
+      border-top: $caret-width solid transparent;
+      border-bottom: $caret-width solid transparent;
+    }
+    &:after {
+      left: $border-width;
+      top: $border-width;
+      border-right: ($caret-width - $border-width) solid $background-color;
+      border-top: ($caret-width - $border-width) solid transparent;
+      border-bottom: ($caret-width - $border-width) solid transparent;
+    }
+  }
+}
+
+
+
+/// 设置`position`
+/// @access public
+/// @author 大漠
+/// @example
+/// //SCSS
+/// 
+/// .absolute{
+///   @include position(absolute,top 10px right 20px);
+/// }
+/// .absolute{
+///   @include position(absolute,top 0 right 0 bottom 0 left 0);
+/// }
+///	
+/// //Output CSS
+/// 
+/// .absolute {
+///   top: 10px;
+///   right: 20px;
+///   position: absolute; 
+/// }
+/// 
+/// .absolute {
+///   top: 0;
+///   right: 0;
+///   bottom: 0;
+///   left: 0;
+///   position: absolute; 
+/// }
+/// @link http://sassmeister.com/gist/a70eb473b806c4e2a57d
+/// @link 
+/// @param {string} $position - 可选值: `static` | `relative` | `absolute` | `fixed`
+/// @param {string} $args - 可设置值: `top` | `right` | `bottom` | `left`
+
+@mixin position($position,$args){
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+		@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+	position: $position;
+}

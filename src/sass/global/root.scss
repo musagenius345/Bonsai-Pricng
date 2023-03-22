@@ -1,0 +1,54 @@
+
+:root {
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+  --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+  --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+  --step-6: clamp(3.36rem, calc(2.87rem + 2.45vw), 4.77rem);
+
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.09vw), 0.31rem);
+  --space-2xs: clamp(0.50rem, calc(0.46rem + 0.19vw), 0.63rem);
+  --space-xs: clamp(0.75rem, calc(0.69rem + 0.28vw), 0.94rem);
+  --space-s: clamp(1.00rem, calc(0.93rem + 0.37vw), 1.25rem);
+  --space-m: clamp(1.50rem, calc(1.39rem + 0.56vw), 1.88rem);
+  --space-l: clamp(2.00rem, calc(1.85rem + 0.74vw), 2.50rem);
+  --space-xl: clamp(3.00rem, calc(2.78rem + 1.11vw), 3.75rem);
+  --space-2xl: clamp(4.00rem, calc(3.70rem + 1.48vw), 5.00rem);
+  --space-3xl: clamp(6.00rem, calc(5.56rem + 2.22vw), 7.50rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, calc(0.14rem + 0.56vw), 0.63rem);
+  --space-2xs-xs: clamp(0.50rem, calc(0.37rem + 0.65vw), 0.94rem);
+  --space-xs-s: clamp(0.75rem, calc(0.60rem + 0.74vw), 1.25rem);
+  --space-s-m: clamp(1.00rem, calc(0.74rem + 1.30vw), 1.88rem);
+  --space-m-l: clamp(1.50rem, calc(1.20rem + 1.48vw), 2.50rem);
+  --space-l-xl: clamp(2.00rem, calc(1.48rem + 2.59vw), 3.75rem);
+  --space-xl-2xl: clamp(3.00rem, calc(2.41rem + 2.96vw), 5.00rem);
+  --space-2xl-3xl: clamp(4.00rem, calc(2.96rem + 5.19vw), 7.50rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.00rem, calc(0.56rem + 2.22vw), 2.50rem);
+  --space-s-xl: clamp(1.00rem, calc(0.19rem + 4.07vw), 3.75rem);
+  --space-3xs-s: clamp(0.25rem, calc(-0.05rem + 1.48vw), 1.25rem);
+  --space-l-2xl: clamp(2.00rem, calc(1.11rem + 4.44vw), 5.00rem);
+  --space-xl-3xl: clamp(3.00rem, calc(1.67rem + 6.67vw), 7.50rem);
+
+
+  --grid-max-width: 92.50rem;
+  --grid-gutter: var(--space-s-l, clamp(1.00rem, calc(0.59rem + 2.07vw), 2.50rem));
+  --grid-columns: 12;
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}

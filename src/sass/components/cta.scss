@@ -8,7 +8,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: hsla(144, 80%, 30%, 1);
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -61,7 +61,7 @@ input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
-  border-color: #1EAEDB; 
+   
 }
 
 
@@ -78,8 +78,11 @@ button{
   /* all: unset; */
   /* width: px2em(200px); */
   border: 2px solid $green;
-  border-radius: 8px;
+  margin: 0 auto;
   
+  :is(:hover, :focus :visited){
+    
+  }
   
 }
 
@@ -89,10 +92,18 @@ button{
   &__clear{
     background-color: $bg;
     color: $green;
+    :is(:hover, :focus){
+      background: $green;
+      color: $bg;
+    }
   }
   &__fill{
     background-color: $green;
     color: $bg;
+    :is(:hover, :focus) {
+      background: $bg;
+      color: $green;
+    }
   }
 }
 

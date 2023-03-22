@@ -1,0 +1,14 @@
+@use 'sass:math';
+
+
+@function px2em($px) {
+  @if math.is-unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+    @return px2em($px * 1px);
+  }
+  // if $px is compatible with em units, then return value unchanged
+  @if math.compatible($px, 1em) {
+    @return $px;
+  }
+  @return math.div($px, 16px) * 1em;
+}

@@ -1,0 +1,71 @@
+@use '../util' as *;
+
+.card{
+  background-color: hsla(235, 6%, 74%, .4);
+  @include flex($direction: column);
+  background-color: $card;
+  border: 2px solid $card2;
+  
+  padding: 2em 4em;
+  
+  gap: 1em;
+  &-container{
+    @include equal-col();
+    gap: 2em;
+    margin-inline: 6rem;
+    margin-block: 1.5rem;
+  
+  }
+  &__duration{
+    color: $gray;
+    text-transform: uppercase;
+  }
+  &__header{
+    border-bottom: 3px solid $green;
+    > h2{
+      text-wrap: nowrap;
+    }
+  }
+  h2{
+    font-size: 3rem;
+    font-weight: 500;
+    color: $card2;
+  }
+  &__submit{
+    flex: 1;
+    margin-bottom: 2em;
+    
+  }
+  ul li{
+    line-height: 1;
+    padding-left: .6em;
+    &::marker{
+      content: url('../../../assets/icons/check-solid.svg');
+    }
+    
+  }
+
+}
+
+.tag{
+  
+  background-color: $tag;
+  border: 2px solid $tag2;
+}
+
+
+.stats{
+  font-size: var(--step-5);
+  font-weight: 500;
+  display: inline-block;
+  sup{
+    font-weight: 300;
+    padding-right: 3px;
+  }
+  
+  
+  /* &::before{
+    content: '$';
+    font-size: var(--step--3); 
+  }*/
+}

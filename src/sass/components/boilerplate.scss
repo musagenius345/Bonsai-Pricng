@@ -29,7 +29,10 @@ ul {
   gap: .4em;
 }
 
-
+a{
+  text-decoration: none;
+  /* color: $green; */
+}
 
 /* SkeletonCSS */
 
@@ -42,4 +45,9 @@ ol ul {
 li {
   margin-bottom: 1rem; 
   list-style: none;
+}
+
+
+.text-green {
+  color: $green;
 }

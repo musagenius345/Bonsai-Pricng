@@ -7,6 +7,7 @@
 ### Recreating this to learn:
 - Pricing layout
 - Toggle switches
+- Custom list style  
 - Dropdowns
 - Accordions
 - SVG BLobs

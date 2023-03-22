@@ -1,0 +1,47 @@
+@use '../util' as *;
+
+header{
+  /* max-width: 100%; */
+  margin-bottom: 12rem;
+  
+}
+nav{
+  padding: 0 5rem;
+  height: clamp(9rem, px2em(120px), 12em);
+  margin-top: -25px;
+  @include flex($align: center);
+}
+
+.navbar{
+  @include flex(space-between, center, row);
+  overflow: hidden;
+  
+  
+  &__container{
+    position: relative;
+    a:hover{
+      
+    }
+  }
+}
+.nav{
+  @include flex(space-between, center, row);
+  
+  gap: 1em;
+  a{
+    color: $gray;
+    display: inline-block;
+  }
+  
+  &__end{
+    @include flex(space-around, center, row);
+  }
+  &__list-item{
+    color: hsla(235, 6%, 74%, .4);
+  }
+}
+
+
+
+
+

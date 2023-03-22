@@ -3,6 +3,7 @@
 
 .tier{
   @include flex(space-evenly, flex-start, column);
+  padding: 1.4em 1.75em;
   
   &__column{
     @include flex(flex-start, stretch, column);
@@ -12,8 +13,8 @@
   
   &__price{
     @include flex(center, center, row);
-    font-size: 2.5rem;
-    font-weight: 550;
+    font-size: 2.25rem;
+    font-weight: 500;
     margin: 0 auto;
     text-align: center;
     padding-top: 2em;
@@ -22,6 +23,15 @@
   &__detail{
     @include flex($direction: column);
     
+  }
+  &__full-detail{
+    a{
+      color: $green;
+      text-decoration: none;
+      &:hover{
+        color: $tag;
+      }
+    }
   }
   :is(&1, &2, &3){
     @include flex(space-between, flex-start, row);
